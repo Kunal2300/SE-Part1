@@ -24,8 +24,8 @@ class Calculator():
             raise ValueError('Can not divide by zero!')
         return x / y
     
-    def integer_divide(cls,x,y):
-        """Integer Division Function"""
+    def floor_division(cls,x,y):
+        """Floor Division Function"""
         if y == 0:
             raise ValueError('Can not divide by zero!')
         return x //y
