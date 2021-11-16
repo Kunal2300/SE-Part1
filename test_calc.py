@@ -15,8 +15,8 @@ class TestCalculator(unittest.TestCase):
 
    #Test cases
    def test_add(self):
-      self.assertEqual(self.calc.add(2, 7), 9, msg="Passed")
-      self.assertEqual(self.calc.add(-5, 5), 0, msg="Passed")
+      self.assertEqual(self.calc.add(30, 70), 100, msg="Passed")
+      self.assertEqual(self.calc.add(-11, 5), -6, msg="Passed")
       self.assertEqual(self.calc.add(-7, -5), -12, msg="Passed")
 
    def test_subtract(self):
@@ -37,16 +37,16 @@ class TestCalculator(unittest.TestCase):
       self.assertEqual(self.calc.divide(-1, -1), 1, msg="Passed")
       self.assertEqual(self.calc.divide(5, 2), 2.5, msg="Passed")
 
-   def test_interger_divide(self):
+   def test_floor_division(self):
       
-      self.assertEqual(self.calc.integer_divide(10, 5), 2, msg="Passed")
+      self.assertEqual(self.calc.integer_divide(9, 5), 1.8, msg="Passed")
       self.assertEqual(self.calc.integer_divide(-1, 1), -1, msg="Passed")
-      self.assertEqual(self.calc.integer_divide(-1, -1), 1, msg="Passed")
+      self.assertEqual(self.calc.integer_divide(-1.9, -1), 1, msg="Passed")
       self.assertEqual(self.calc.integer_divide(5, 2), 2, msg="Passed")  
 
    def test_power(self):
       
-      self.assertEqual(self.calc.power(10, 2), 100, msg="Passed")
+      self.assertEqual(self.calc.power(5, 2), 25, msg="Passed")
       self.assertEqual(self.calc.power(-1, 1), -1, msg="Passed")
       self.assertEqual(self.calc.power(2, -2), 0.25, msg="Passed")
 
@@ -54,7 +54,7 @@ class TestCalculator(unittest.TestCase):
       
       self.assertEqual(self.calc.factorial(1), 1, msg="Passed")
       self.assertEqual(self.calc.factorial(0), 1, msg="Passed")
-      self.assertEqual(self.calc.factorial(5), 120, msg="Passed")
+      self.assertEqual(self.calc.factorial(6), 720, msg="Passed")
 
 def tearDownModule():
     print('End the testing module')
